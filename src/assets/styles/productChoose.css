@@ -1,0 +1,25 @@
+.btn-primary, 
+.btn-primary:hover, 
+.btn-primary:active, 
+.btn-primary:visited {
+  background-color: #DB3022 !important;
+  border-color: #DB3022 !important;
+  padding: 6px 24px !important;
+}
+
+.btn-outline-primary, 
+.btn-outline-primary:hover, 
+.btn-outline-primary:active, 
+.btn-outline-primary:visited {
+  border-color: #DB3022 !important;
+  padding: 6px 24px !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: #DB3022 !important;
+  color: white !important;
+}
+
+.btn-space {
+  margin-right: 5px;
+}

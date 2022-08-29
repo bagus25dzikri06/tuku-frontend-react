@@ -1,10 +1,11 @@
-import React from 'react';
-//import React, { useState, useEffect } from 'react';
+//import React from 'react';
+import React, { useState, useEffect } from 'react';
 //import Card from './components/Card'
 import Router from './router/index'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
+  const [num, setNum] = useState(0)
   /*const [name, setName] = useState('tono')
   const [email, setEmail] = useState('tono@gmail.com')
   const [num, setNum] = useState(0)

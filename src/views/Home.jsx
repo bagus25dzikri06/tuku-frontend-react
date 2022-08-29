@@ -1,37 +1,75 @@
 import React from 'react'
-import { Link, useSearchParams } from 'react-router-dom'
-import logo from '../logo.svg'
-import styles from '../assets/styles/Home.module.css'
-//import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar'
+import Promo from '../components/Promo'
+import Category from '../components/Category'
+import Card from '../components/Card'
 
 const Home = () => {
-  const [queryParams] = useSearchParams()
-  const search = queryParams.get('search')
-  const sort = queryParams.get('sort')
-  const type = queryParams.get('type')
-  const showAlert = () => {
-    alert('123')
-  }
   return (
     <>
-      <h1 className={styles.title}>Home {search} {sort} {type}</h1>
-      <img src={logo} style={{ width: '200px' }} alt=""/>
-      <img src='https://logos-download.com/wp-content/uploads/2016/09/React_logo_wordmark.png' style={{ width: '200px' }} alt=""/>
-      <br />
-      <button className="btn btn-success" onClick={() => showAlert()}>Alert</button>
-      <br />
-      <Link className="btn btn-danger"to='/123'>Detail</Link> | <Link to='/new'>Insert</Link>
-      | <Link to='/?search=abc&sort=name&type=asc'>Search</Link>
+      <div className="overflow-hidden">
+        <Navbar />
+        <Promo />
+        <h1>Category</h1>
+        <p>What are you currently looking for?</p>
+        <Category />
+        <h1>New</h1>
+        <p>You've never seen it before</p>
+        <div style={{
+            margin: '20px 40px'
+        }}>
+          <div className="row row-cols-1 row-cols-md-5 g-3 py-3">
+            <div className="col"><Card /></div>
+            <div className="col"><Card /></div>
+            <div className="col"><Card /></div>
+            <div className="col"><Card /></div>
+            <div className="col"><Card /></div>
+          </div>
+          <div className="row row-cols-1 row-cols-md-5 g-3 py-3">
+            <div className="col"><Card /></div>
+            <div className="col"><Card /></div>
+            <div className="col"><Card /></div>
+            <div className="col"><Card /></div>
+            <div className="col"><Card /></div>
+          </div>
+          <div className="row row-cols-1 row-cols-md-5 g-3 py-3">
+            <div className="col"><Card /></div>
+            <div className="col"><Card /></div>
+            <div className="col"><Card /></div>
+            <div className="col"><Card /></div>
+            <div className="col"><Card /></div>
+          </div>
+        </div>
+        <h1>Popular</h1>
+        <p>Find clothes that are trending recently</p>
+        <div style={{
+            margin: '20px 40px'
+        }}>
+          <div className="row row-cols-1 row-cols-md-5 g-3 py-3">
+            <div className="col"><Card /></div>
+            <div className="col"><Card /></div>
+            <div className="col"><Card /></div>
+            <div className="col"><Card /></div>
+            <div className="col"><Card /></div>
+          </div>
+          <div className="row row-cols-1 row-cols-md-5 g-3 py-3">
+            <div className="col"><Card /></div>
+            <div className="col"><Card /></div>
+            <div className="col"><Card /></div>
+            <div className="col"><Card /></div>
+            <div className="col"><Card /></div>
+          </div>
+          <div className="row row-cols-1 row-cols-md-5 g-3 py-3">
+            <div className="col"><Card /></div>
+            <div className="col"><Card /></div>
+            <div className="col"><Card /></div>
+            <div className="col"><Card /></div>
+            <div className="col"><Card /></div>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
-
-/*const Home = () => {
-  return (
-    <>
-      <Navbar />
-    </>
-  )
-}*/
 
 export default Home
