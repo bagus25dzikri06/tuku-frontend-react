@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+import Navbar2 from '../components/Navbar2'
 import Card from '../components/Card'
 import ProductChoose from '../components/ProductChoose'
 import ProductPhoto from '../components/ProductPhoto'
@@ -9,14 +9,13 @@ import { FaStar } from 'react-icons/fa'
 //import '../assets/styles/detail.css'
 
 const ProductDetail = () => {
-  //const { id } = useParams()
   return (
     <>
       {/*<h1 className="judul">Detail {id}</h1>
       <Link to='/123'>Detail</Link> | <Link to='/new'>Insert</Link>
       | <Link to='/?search=abc'>Search</Link>*/}
       <div className="overflow-hidden">
-        <Navbar />
+        <Navbar2 />
         <ul class="list-inline py-2 ms-2">
             <li class="list-inline-item">Home <AiOutlineRight /></li>
             <li class="list-inline-item">Category <AiOutlineRight /></li>
@@ -60,7 +59,7 @@ const ProductDetail = () => {
               <FaStar color='#FFBA49' size={30}/>
             </p>
           </div>
-          <div className="col-2 py-4">
+          <div className="col-1 py-4">
             <ul class="list-unstyled">
               <li><FaStar color='#FFBA49' /> 5</li>
               <li><FaStar color='#FFBA49' /> 4</li>
@@ -69,7 +68,22 @@ const ProductDetail = () => {
               <li><FaStar color='#FFBA49' /> 1</li>
             </ul>
           </div>
-          <div className="col-10"></div>
+          <div className="col-2 py-4">
+            <ul class="list-unstyled">
+              <li>
+                <div class="progress" style={{width: '100%'}}></div>
+              </li>
+            </ul>
+          </div>
+          <div className="col-7 py-4">
+            <ul class="list-unstyled">
+              <li>4</li>
+              <li>0</li>
+              <li>0</li>
+              <li>0</li>
+              <li>0</li>
+            </ul>
+          </div>
         </div>
         <h1>You can also like this</h1>
         <p>You’ve never seen it before!</p>

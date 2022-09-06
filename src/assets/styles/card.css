@@ -1,0 +1,11 @@
+.card-title, .card-title:hover, .card-title:active, .card-title:visited {
+  color: #000000 !important;
+}
+
+.card-subtitle, .card-subtitle:hover, .card-subtitle:active, .card-subtitle:visited {
+  color: #DB3022 !important;
+}
+
+p, p:hover, p:active, p:visited {
+  color: #9B9B9B !important;
+}

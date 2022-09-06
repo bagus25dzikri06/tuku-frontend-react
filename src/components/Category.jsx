@@ -1,5 +1,6 @@
 import React from 'react'
 import Carousel from "react-multi-carousel"
+import { Link } from 'react-router-dom'
 import "react-multi-carousel/lib/styles.css"
 import '../assets/styles/category.module.css'
 
@@ -26,6 +27,11 @@ const Category = ({deviceType}) => {
     'images/Group1241.svg', 'images/Group1242.svg', 'images/Group1243.svg',
     'images/Group1244.svg', 'images/Group1245.svg'
   ]
+  const category = [
+    'Pants', 'Jacket', 'Shorts', 'T-Shirt', 'High heels',
+    'Wristwatch', 'Handbag', 'Bagback', 'Socks', 'Glasses', 
+    'Cap', 'Tie', 'Dress', 'Formal suit', 'Accessories' 
+  ]
   return (
     <>
       <div style={{
@@ -42,10 +48,13 @@ const Category = ({deviceType}) => {
             {images.map((each, index) => {
               return (
                 <div key={index}>
-                  <img src={each} width={206} height={220} />
+                  <Link to={`/category?category=${category[index]}`}>
+                    <img src={each} width={206} height={220} />
+                  </Link>
                 </div>
               );
-            })}
+            })
+            }
           </Carousel>
       </div>
     </>
