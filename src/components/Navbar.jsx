@@ -1,6 +1,7 @@
 import React from 'react'
 import { BiSearch } from 'react-icons/bi'
 import { FiFilter, FiShoppingCart } from 'react-icons/fi'
+import { Link } from 'react-router-dom'
 import '../assets/styles/navbar.css'
 
 const Navbar = () => {
@@ -40,8 +41,8 @@ const Navbar = () => {
                         <FiShoppingCart size={20} />
                       </a>
                     </li>
-                    <li><a href="#" className="nav-item nav-link btn btn-lg btn-space btn-primary text-light rounded-pill">Login</a></li>
-                    <li><a href="#" className="nav-item nav-link btn btn-lg btn-space btn-outline-primary rounded-pill">Signup</a></li>
+                    <li><Link to='/login' className="nav-item nav-link btn btn-lg btn-space btn-primary text-light rounded-pill">Login</Link></li>
+                    <li><Link to='/register' className="nav-item nav-link btn bbtn-lg btn-space btn-outline-primary rounded-pill">Signup</Link></li>
                 </ul>
             </div>
         </div>
